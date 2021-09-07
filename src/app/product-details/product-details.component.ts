@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Input } from '@angular/core';
 
 import { Product, products } from '../products';
 
@@ -9,7 +10,7 @@ import { Product, products } from '../products';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product: Product | undefined;
+  @Input() product: Product | undefined;
 
   constructor(private route: ActivatedRoute) {}
 
