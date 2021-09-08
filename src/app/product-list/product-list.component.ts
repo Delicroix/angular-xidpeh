@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // imports just the list, not the interface
 import { products } from '../products';
@@ -8,8 +8,10 @@ import { products } from '../products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   products = products;
+
+  ngOnInit() {}
 
   share() {
     window.alert('The product has been shared!');
@@ -19,16 +21,3 @@ export class ProductListComponent {
     window.alert('You will be notified when the product goes on sale');
   }
 }
-// export class ProductListComponent {
-//   products = products;
-
-//   share() {
-//     window.alert('The product has been shared!');
-//   }
-// }
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

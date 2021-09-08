@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
 // imports the interface, not the list
@@ -16,7 +16,9 @@ import { Product } from '../products';
 
 //   ngOnInit() {}
 // }
-export class ProductAlertsComponent {
+export class ProductAlertsComponent implements OnInit {
   @Input() product: Product | undefined;
   @Output() notify = new EventEmitter();
+
+  ngOnInit() {}
 }
